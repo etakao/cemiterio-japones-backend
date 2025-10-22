@@ -11,6 +11,7 @@ export const dataSourceOptions: DataSourceOptions = {
   username: dbUrl?.user || process.env.DB_USERNAME,
   password: dbUrl?.password || process.env.DB_PASSWORD,
   database: dbUrl?.database || process.env.DB_DATABASE,
+  ssl: { rejectUnauthorized: false }, // for secure connections, adjust as needed
   entities: [__dirname + '/**/*.entity.{ts,js}'],
   migrations: [__dirname + '/migrations/*.{ts,js}'],
   synchronize: false,
