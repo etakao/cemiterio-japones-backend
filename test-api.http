@@ -1,0 +1,36 @@
+### Teste da API de Túmulos
+
+### 1. Buscar todos os túmulos
+GET http://localhost:3000/tumulos/all
+
+### 2. Buscar túmulos com filtro por nome
+GET http://localhost:3000/tumulos?nome=João
+
+### 3. Buscar túmulos com filtro por nome do parente
+GET http://localhost:3000/tumulos?nomeParente=Maria
+
+### 4. Buscar túmulos com filtro por local de origem
+GET http://localhost:3000/tumulos?localOrigem=São Paulo
+
+### 5. Buscar túmulos com filtro por fileira
+GET http://localhost:3000/tumulos?fileira=1
+
+### 6. Buscar túmulos com múltiplos filtros
+GET http://localhost:3000/tumulos?nome=João&localOrigem=São Paulo&page=1&limit=5
+
+### 7. Buscar túmulo por ID
+GET http://localhost:3000/tumulos/1
+
+### 8. Criar novo túmulo
+POST http://localhost:3000/tumulos
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "tipo": "individual",
+  "ocupado": true,
+  "geom": {
+    "type": "Polygon",
+    "coordinates": [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]
+  }
+}
