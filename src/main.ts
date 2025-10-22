@@ -14,7 +14,11 @@ async function bootstrap() {
   );
 
   app.enableCors({
-    origin: ['http://localhost:3000', 'http://localhost:5173'],
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:5173',
+      'https://cemiterio-japones-frontend.vercel.app',
+    ],
   });
 
   await app.listen(process.env.PORT ?? 3000);
